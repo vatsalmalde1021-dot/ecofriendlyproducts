@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSprout | Sustainable Living & Zero-Waste Marketplace</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <span><i class="fa-solid fa-leaf"></i> Free carbon-neutral shipping on orders over $50! Use code <strong>EARTH10</strong> for 10% off.</span>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#"><i class="fa-solid fa-seedling"></i> Eco<span>Sprout</span></a>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#shop" class="nav-link">Shop All (100+ Products)</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#impact" class="nav-link">Our Impact</a>
+                <a href="#about" class="nav-link">About Us</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search eco products...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <button class="icon-btn" id="wishlistBtn" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge" id="wishlistBadge">0</span>
+                </button>
+                <button class="icon-btn" id="cartBtn" title="Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cartBadge">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag"><i class="fa-solid fa-earth-americas"></i> 100% Plastic-Free & Carbon Neutral</span>
+            <h1>Live Consciously, <br><em>Thrive Sustainably</em></h1>
+            <p>Explore over 100 meticulously curated, ethically sourced eco-friendly essentials designed to reduce your footprint without compromising on quality.</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn btn-primary">Explore 100+ Items <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#impact" class="btn btn-outline">Our Earth Impact</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>125,400+</h3>
+                    <p>Plastic Bottles Saved</p>
+                </div>
+                <div class="stat-item">
+                    <h3>45,000+</h3>
+                    <p>Trees Planted</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Zero-Waste Packaging</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-box">
+                <i class="fa-solid fa-box-open"></i>
+                <div>
+                    <h4>Plastic-Free Shipping</h4>
+                    <p>Compostable mailers & paper tape</p>
+                </div>
+            </div>
+            <div class="trust-box">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <div>
+                    <h4>Ethically Handcrafted</h4>
+                    <p>Fair wages for global artisans</p>
+                </div>
+            </div>
+            <div class="trust-box">
+                <i class="fa-solid fa-tree"></i>
+                <div>
+                    <h4>1 Item = 1 Tree Planted</h4>
+                    <p>Verified global reforestation</p>
+                </div>
+            </div>
+            <div class="trust-box">
+                <i class="fa-solid fa-rotate-left"></i>
+                <div>
+                    <h4>30-Day Conscious Return</h4>
+                    <p>Hassle-free satisfaction policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Carousel/Grid -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop By Category</h2>
+                <p>Find sustainable alternatives for every room in your home</p>
+            </div>
+            <div class="category-grid" id="categoryGrid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Shop Section (Over 100 Products Catalog) -->
+    <section class="shop-section" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sustainable Collection</h2>
+                <p>Browse our complete catalog of certified eco-friendly essentials</p>
+            </div>
+
+            <!-- Shop Controls / Filters -->
+            <div class="shop-controls">
+                <div class="filter-pills" id="categoryFilters">
+                    <button class="filter-pill active" data-category="all">All Products (100+)</button>
+                    <button class="filter-pill" data-category="Kitchen">Kitchen & Dining</button>
+                    <button class="filter-pill" data-category="Bathroom">Bathroom & Body</button>
+                    <button class="filter-pill" data-category="Home">Zero-Waste Home</button>
+                    <button class="filter-pill" data-category="Lifestyle">Lifestyle & Travel</button>
+                    <button class="filter-pill" data-category="Apparel">Eco Apparel</button>
+                </div>
+                <div class="sort-wrapper">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Dynamically Rendered 100+ Products via JS -->
+            </div>
+
+            <!-- Pagination or Load More -->
+            <div class="pagination-container" id="paginationContainer">
+                <button class="btn btn-outline" id="loadMoreBtn">Load More Products (<span id="remainingCount"></span> left)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Counter Section -->
+    <section class="impact-section" id="impact">
+        <div class="container impact-container">
+            <div class="impact-text">
+                <span class="badge-text"><i class="fa-solid fa-seedling"></i> Collective Footprint</span>
+                <h2>Your Purchases Make a Real Difference</h2>
+                <p>Every order placed on EcoSprout directly contributes to ocean cleanup initiatives, fair-trade artisan cooperatives, and verified tree-planting projects across the globe.</p>
+                <div class="impact-metrics-grid">
+                    <div class="metric-card">
+                        <i class="fa-solid fa-water"></i>
+                        <h4>1.2M Gallons</h4>
+                        <p>Water Saved</p>
+                    </div>
+                    <div class="metric-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h4>350 MWh</h4>
+                        <p>Clean Energy Supported</p>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-calculator">
+                <h3>Calculate Your Footprint Savings</h3>
+                <p>Estimate how switching to zero-waste swaps affects your annual footprint.</p>
+                <div class="calc-form">
+                    <div class="form-group">
+                        <label>Plastic water bottles used/week:</label>
+                        <input type="number" id="calcBottles" value="5" min="0" max="50">
+                    </div>
+                    <div class="form-group">
+                        <label>Plastic grocery bags used/week:</label>
+                        <input type="number" id="calcBags" value="10" min="0" max="100">
+                    </div>
+                    <div class="calc-result">
+                        <div>
+                            <span>Annual Plastic Prevented:</span>
+                            <strong id="calcPlasticSaved">42 kg</strong>
+                        </div>
+                        <div>
+                            <span>CO2 Emissions Avoided:</span>
+                            <strong id="calcCo2Saved">110 kg</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Loved By Conscious Shoppers</h2>
+                <p>See what our community has to say about transitioning to sustainable living</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Switching to the organic bamboo toothbrushes and shampoo bars was so easy. EcoSprout's packaging had zero plastic!"</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sarah M.">
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"The stainless steel lunchbox and produce bags are extraordinarily high quality. I love knowing every order plants a tree."</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus T.">
+                        <div>
+                            <h4>Marcus Vance</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Fast carbon-neutral shipping and wonderful customer support. The beeswax food wraps keep my produce fresh twice as long!"</p>
+                    <div class="author">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Elena R.">
+                        <div>
+                            <h4>Elena Rostova</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container newsletter-content">
+            <div class="news-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <h2>Join the Zero-Waste Movement</h2>
+            <p>Subscribe to receive eco-living tips, zero-waste recipes, and 15% off your first order.</p>
+            <form id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Use code EARTH10 at checkout.');">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Join & Get 15% Off</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <a href="#"><i class="fa-solid fa-seedling"></i> Eco<span>Sprout</span></a>
+                </div>
+                <p>Making sustainable living accessible, beautiful, and impactful for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#shop">Shop All</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#impact">Our Impact</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Zero-Waste Packaging</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 742 Evergreen Terrace, Eco City, OR</p>
+                <p><i class="fa-solid fa-envelope"></i> support@ecosprout.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (800) 326-7768</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 EcoSprout Marketplace Inc. All rights reserved. 1% for the Planet Member.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> Your Eco Cart (<span id="cartCountTitle">0</span>)</h3>
+            <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-progress">
+            <p id="freeShippingText">Add $50.00 more for Free Carbon-Neutral Shipping!</p>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="shippingProgressBar"></div>
+            </div>
+        </div>
+        <div class="cart-items" id="cartItemsContainer">
+            <!-- Dynamically populated -->
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="promo-box">
+                <input type="text" id="promoInput" placeholder="Promo code (e.g., EARTH10)">
+                <button id="applyPromoBtn" class="btn btn-outline">Apply</button>
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">$0.00</span>
+                </div>
+                <div class="summary-row" id="discountRow" style="display:none;">
+                    <span>Discount (<span id="discountCodeName"></span>)</span>
+                    <span id="cartDiscount">-$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Estimated Shipping</span>
+                    <span id="cartShipping">$5.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="cartTotal">$5.00</span>
+                </div>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkoutBtn">Proceed to Checkout <i class="fa-solid fa-lock"></i></button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Wishlist Drawer / Modal -->
+    <div class="wishlist-drawer" id="wishlistDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-heart"></i> Your Saved Wishlist (<span id="wishlistCountTitle">0</span>)</h3>
+            <button class="close-btn" id="closeWishlistBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="wishlistItemsContainer">
+            <!-- Dynamically populated -->
+        </div>
+    </div>
+    <div class="cart-overlay" id="wishlistOverlay"></div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <button class="close-btn modal-close" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="quick-view-grid" id="quickViewGrid">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
